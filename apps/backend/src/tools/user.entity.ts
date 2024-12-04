@@ -13,9 +13,6 @@ export class UserEntity {
   @CreateDateColumn()
   created_at: Date;
 
-  //   @Column()
-  //   userId: string;
-
   @Column()
   userName: string;
 
