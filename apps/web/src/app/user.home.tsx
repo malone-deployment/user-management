@@ -38,7 +38,8 @@ export default function User() {
     formState: { errors },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
-    const BaseUrl = 'http://localhost:3000/api/';
+    const BaseUrl =
+      'https://user-management-backend-service-422041495987.asia-southeast1.run.app/api/';
     const response = await fetch(`${BaseUrl}user`, {
       method: 'POST',
       headers: {
@@ -53,7 +54,8 @@ export default function User() {
 
   async function deleteButton(id: string) {
     alert('are you sure you want to delete this item?');
-    const baseUrl = 'http://localhost:3000/api/';
+    const baseUrl =
+      'https://user-management-backend-service-422041495987.asia-southeast1.run.app/api/';
     try {
       const response = await fetch(`${baseUrl}user?id=${id}`, {
         method: 'DELETE',

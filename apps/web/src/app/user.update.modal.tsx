@@ -37,7 +37,8 @@ export default function BasicModal({ id, fetchUsers }: BasicModalProps) {
     formState: { errors },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
-    const BaseUrl = 'http://localhost:3000/api/';
+    const BaseUrl =
+      'https://user-management-backend-service-422041495987.asia-southeast1.run.app/api/';
     const response = await fetch(`${BaseUrl}user?id=${id}`, {
       method: 'PATCH',
       headers: {
