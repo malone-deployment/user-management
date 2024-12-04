@@ -25,7 +25,8 @@ export default function User() {
     getList();
   }, []);
   const getList = async (): Promise<void> => {
-    const BaseUrl = 'http://localhost:3000/api/';
+    const BaseUrl =
+      'https://user-management-backend-service-422041495987.asia-southeast1.run.app/api/';
     const response = await fetch(`${BaseUrl}user`);
     const result = await response.json();
     setuserList(result);
